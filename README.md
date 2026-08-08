@@ -15,6 +15,10 @@ A Tokyo Night theme for the <a href="https://github.com/sddm/sddm">SDDM Login Ma
 </details>
 </center>
 
+## Note from the forker
+
+This fork is the same as the original - I just ported it to be compatible with qt6 if you install the qt5 backcompat package.
+
 ## Install
 ### From sources
 > _Assumes that you've installed and configured SDDM correctly_ (if not [read more](https://wiki.archlinux.org/title/SDDM))
