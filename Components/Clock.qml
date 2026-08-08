@@ -32,7 +32,8 @@ Column {
 
     Label {
         anchors.horizontalCenter: parent.horizontalCenter
-        font.pointSize: config.HeaderText !=="" ? root.font.pointSize * 3 : 0
+        visible: config.HeaderText !== ""
+        font.pointSize: root.font.pointSize * 3
         color: root.palette.text
         renderType: Text.QtRendering
         text: config.HeaderText
@@ -52,6 +53,7 @@ Column {
     Label {
         id: dateLabel
         anchors.horizontalCenter: parent.horizontalCenter
+        topPadding: root.font.pointSize * 0.8
         color: root.palette.text
         renderType: Text.QtRendering
         function updateTime() {

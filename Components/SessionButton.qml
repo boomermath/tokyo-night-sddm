@@ -24,24 +24,26 @@
 
 import QtQuick 2.11
 import QtQuick.Controls 2.4
-import QtGraphicalEffects 1.0
+import Qt5Compat.GraphicalEffects
 
 Item {
     id: sessionButton
-    height: root.font.pointSize
+    height: root.font.pointSize * 1.8
     width: parent.width / 2
     anchors.horizontalCenter: parent.horizontalCenter
 
     property var selectedSession: selectSession.currentIndex
     property string textConstantSession
     property int loginButtonWidth
-    property Control exposeSession: selectSession
+    property Item exposeSession: selectSession
 
     ComboBox {
         id: selectSession
 
         hoverEnabled: true
         anchors.left: parent.left
+        anchors.top: parent.top
+        anchors.topMargin: root.font.pointSize * 0.8
         Keys.onPressed: {
             if (event.key == Qt.Key_Up && loginButton.state != "enabled" && !popup.opened)
                 revealSecret.focus = true,
